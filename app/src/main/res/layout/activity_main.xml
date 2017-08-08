@@ -47,6 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Type here password.."
+        android:password="true"
         android:imeOptions="actionDone"
         android:singleLine="true"
         android:textColor="#fff"
@@ -68,7 +69,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textColor="#000"
-        android:background="#fff"
         android:textStyle="bold"
         android:textSize="14sp"
         android:layout_margin="24dp"/>
