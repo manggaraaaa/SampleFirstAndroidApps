@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
-public class HomeActivity extends FragmentActivity implements HomeFragment.Replaces {
+public class HomeActivity extends FragmentActivity implements HomeFragment.Replaces, TampilFragment.Rep  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,5 +18,10 @@ public class HomeActivity extends FragmentActivity implements HomeFragment.Repla
     @Override
     public void ReplaceFragment() {
         getSupportFragmentManager().beginTransaction().replace(R.id.vBody, new TampilFragment()).commit();
+    }
+
+    @Override
+    public void RepFragment() {
+        getSupportFragmentManager().beginTransaction().replace(R.id.vBody, new HomeFragment()).commit();
     }
 }

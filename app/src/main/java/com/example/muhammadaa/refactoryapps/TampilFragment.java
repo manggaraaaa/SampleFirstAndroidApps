@@ -1,6 +1,7 @@
 package com.example.muhammadaa.refactoryapps;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -16,6 +17,8 @@ import android.widget.Button;
 public class TampilFragment extends Fragment {
 
     Button kembali;
+
+    private Rep mListener;
 
 
     public TampilFragment() {
@@ -33,14 +36,28 @@ public class TampilFragment extends Fragment {
         kembali.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent intent = new Intent(getActivity(),HomeActivity.class);
-                startActivity(intent);
+                
+                mListener.RepFragment();
 
             }
         });
 
         return view;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof Rep) {
+            mListener = (Rep) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement OnFragmentInteractionListener");
+        }
+    }
+
+    public interface Rep{
+        void RepFragment();
     }
 
 }
