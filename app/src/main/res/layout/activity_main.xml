@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#b71c1c"
+    android:layout_gravity="center_vertical"
+    tools:context="com.example.muhammadaa.refactoryapps.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/logo2"
+        android:layout_gravity="center_horizontal"
+       />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Username :"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:layout_margin="10dp" />
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Type here username.."
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:textColor="#fff"
+        android:textSize="12sp"
+        android:layout_margin="10dp"
+        android:background="@drawable/inputstyle"
+        android:focusableInTouchMode="true"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password :"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:layout_margin="10dp"/>
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Type here password.."
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:textColor="#fff"
+        android:textSize="12sp"
+        android:layout_margin="10dp"
+        android:background="@drawable/inputstyle"/>
+    <Button
+        android:id="@+id/bLogin"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Login"
+        android:textColor="#fff"
+        android:background="#7f0000"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:id="@+id/tMessage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="#000"
+        android:background="#fff"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_margin="24dp"/>
+
+</LinearLayout>
