@@ -25,6 +25,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        stopService(new Intent(this,threadService.class));
+
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
 
